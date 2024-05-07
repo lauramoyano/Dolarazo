@@ -19,7 +19,7 @@ def get_driver():
 def scrap_dollar(driver):
     url = "https://www.larepublica.co/indicadores-economicos/mercado-cambiario/dolar"
     driver.get(url)
-    #time.sleep(5)
+    time.sleep(5)
 
     content = driver.find_elements(By.CLASS_NAME, "price")
 
@@ -52,6 +52,7 @@ def get_price_and_date_from_row(row):
 if __name__ == '__main__':
     driver = get_driver()
     prices = scrap_dollar(driver)
-    history = scrap_trm_prices(driver)
+    #history = scrap_trm_prices(driver)
     print(prices)
-    print(history)
+    print(len(prices))
+    #print(history)
