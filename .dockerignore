@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+cogs/__pycache__
+venv/
+env/
+.gitignore
